@@ -1,0 +1,25 @@
+@import helper.twitterBootstrap._
+
+@mainnoheader(title = "Home") {
+
+
+    <div class="container-fluid" >
+              <div class="content-fluid">
+                   <div class="row-fluid">
+                       <div class="logo-holder">
+                            <div class="logo-center"></div>
+                       </div>
+                       <div class="centered">
+                           @helper.form(action = routes.Application.search) {
+                                <input type="text" class="input-xlarge" placeholder="Search" name="query">
+                                 <button type="submit" class="btn"><div class="icon-search" /></button>
+                           }
+                       </div>
+                       <div class="centered">
+                           <a href="about.html">About</a> | <a href="http://twitter.com/know_namer" target="new">Twitter</a> | <a href="">Contact</a>
+                       </div>
+
+                   </div>
+              </div>
+    </div>
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <!-- Le styles -->
+    <link href=@routes.Assets.at("bootstrap/css/bootstrap.css") rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href=@routes.Assets.at("javascripts/jqplot/jquery.jqplot.min.css")/>
+
+    <style type="text/css">
+        body {
+            padding-top: 60px;
+            padding-bottom: 40px;
+        }
+
+        .sidebar-nav {
+            padding: 9px 0;
+        }
+
+
+    </style>
+    <link href=@routes.Assets.at("bootstrap/css/bootstrap-responsive.css")" rel="stylesheet">
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="images/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="images/apple-touch-icon-114x114.png">
+</head>
+
+<body>
+
+<div class="navbar navbar-fixed-top ">
+    <div class="navbar-inner">
+        <div class="container-fluid">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#">Project name</a>
+
+            <div class="nav-collapse">
+                <ul class="nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>
+            </div>
+            <!--/.nav-collapse -->
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="tabbable tabs-left">
+            <ul class="nav nav-tabs">
+                <li class="active"><a href="index.scala.html">Populartity</a></li>
+                <li><a href="states.scala.html">Breakdown by State</a></li>
+                <li><a href="popularity.scala.html">Movies</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Art</a></li>
+                <li><a href="#">Politicians</a></li>
+                <li><a href="#">Scientists</a></li>
+                <li><a href="#">Nobel Laureates</a></li>
+            </ul>
+            <div class="tab-content">
+                <div class="span9">
+                    <div class="row-fluid">
+                        <div class="span8 blue">
+                            <h2>Heading</h2>
+
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
+                                commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam
+                                porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                            <p><a class="btn" href="#">View details &raquo;</a></p>
+                        </div>
+                        <!--/span-->
+                        <div class="span4 blue">
+                            <h2>Heading</h2>
+
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
+                                commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam
+                                porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                            <p><a class="btn" href="#">View details &raquo;</a></p>
+                        </div>
+                        <!--/span-->
+                    </div>
+                    <!--/row-->
+                    <div class="row-fluid">
+                        <div class="span4">
+                            <h2>Heading</h2>
+
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
+                                commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam
+                                porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                            <p><a class="btn" href="#">View details &raquo;</a></p>
+                        </div>
+                        <!--/span-->
+                        <div class="span4">
+                            <h2>Heading</h2>
+
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
+                                commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam
+                                porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                            <p><a class="btn" href="#">View details &raquo;</a></p>
+                        </div>
+                        <!--/span-->
+                        <div class="span4">
+                            <h2>Heading</h2>
+
+                            <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus
+                                commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam
+                                porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+
+                            <p><a class="btn" href="#">View details &raquo;</a></p>
+                        </div>
+                        <!--/span-->
+                    </div>
+                    <!--/row-->
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+
+    </div>
+    <!--/row-->
+
+    <hr>
+
+    <footer>
+        <p>&copy; Company 2012</p>
+    </footer>
+
+</div>
+<!--/.fluid-container-->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src=@routes.Assets.at("bootstrap/js/bootstrap.js")></script>
+<script language="javascript" type="text/javascript" src=@routes.Assets.at("javascripts/jqplot/jquery.min.js")"></script>
+<script language="javascript" type="text/javascript"
+        src=@routes.Assets.at("javascripts/jqplot/jquery.jqplot.min.js")"></script>
+<script type="text/javascript" src=@routes.Assets.at("javascripts/jqplot/plugins/jqplot.canvasTextRenderer.min.js")"></script>
+<script type="text/javascript"
+        src=@routes.Assets.at("javascripts/jqplot/plugins/jqplot.canvasAxisLabelRenderer.min.js")"></script>
+<script type="text/javascript">
+    $(document).ready(function() {
+        var plot1 = $.jqplot('holder', [
+            [3,7,9,1,4,6,8,2,5]
+        ]);
+    });
+</script>
+</body>
+</html>

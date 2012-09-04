@@ -1,0 +1,52 @@
+
+#{extends 'main.html' /}
+
+    <div class="row-fluid" id="search">
+    
+        <div class="span12" >
+            <div id="search-bar">
+                <div class="logo"></div>
+                <div >
+                    <form class="form-search" id="search-holder">
+                        <input type="text" class="input-xlarge" placeholder="Search ">
+                        <button type="submit" class="btn"><div class="icon-search" /></button>
+                    </form>
+                </div>
+             </div>
+        </div>
+
+    </div>
+
+<div class="container-fluid">
+
+
+    <div class="row-fluid" id="main-content">
+        <div class="span12">
+            <div class="tab-content ">
+                <div class="row-fluid">
+                    <div class="span12">
+                        <div class="top-left ">
+                            <div id="map-container" class="chart" style="padding:40px"></div>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+        <script type="text/javascript">
+            var map, paper, pageWidth=810;
+
+
+            var drawMap = function(){
+                paper = new ScaleRaphael('map-container', 950, 650);
+                map = paper.USMap();
+                paper.scaleAll(pageWidth/map.width);
+            }
+
+            drawMap();
+
+        </script>

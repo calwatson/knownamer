@@ -1,0 +1,137 @@
+@import helper.twitterBootstrap._
+
+@mainnoheader(title = "Home") {
+
+    <div class="row-fluid" id="search">
+    
+        <div class="span8 well white" >
+            <div id="search-bar">
+                <div class="logo"></div>
+                <div >
+                    <form class="form-search" id="search-holder">
+                        <input type="text" class="input-xlarge" placeholder="Search ">
+                        <button type="submit" class="btn"><div class="icon-search" /></button>
+                    </form>
+                </div>
+             </div>
+        </div>
+
+    </div>
+
+<div class="container-fluid">
+
+
+    <div class="row-fluid" id="main-content">
+        <div class="span12">
+            <div class="tab-content ">
+                <div class="row-fluid">
+                    <div class="span8">
+                        <div class="top-left ">
+                            <div>asdfasdfasdf</div>
+                            <div id="holder"></div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                    <div class="span4 well">
+                        <div class="header gray" >Did you know? </div>
+                        <div class="top-right">
+                            <div class="panel-content">
+                                <table class="table table-bordered">
+                                    <tr><td>Rank</td><td>Beyond 1000th</td></tr>
+                                    <tr><td>Fraction</td><td>1 out of 2000 males</td></tr>
+                                    <tr><td>Number</td><td>< 300 males per year</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+                <div class="row-fluid">
+                     <div class="span4">
+                        <div class="header gray" >Want to know more?</div>
+                        <div class="bottom-left">
+                            <div class="panel-content">
+                                <table class="table table-bordered">
+                                    <tr><td>Rank</td><td>Beyond 1000th</td></tr>
+                                    <tr><td>Fraction</td><td>1 out of 2000 males</td></tr>
+                                    <tr><td>Number</td><td>< 300 males per year</td></tr>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                    <div class="span4">
+                       <div class="header gray" >Who are they?</div>
+                        <div class="bottom-center">
+                            <div class="panel-content">
+                                <div class="panel-content">
+                                    <ul class="unstyled">
+                                        <li>40 year old virgin</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                    <div class="span4">
+                        <div class="header gray" >Where do they live?</div>
+                        <div class="bottom-right">
+                            <div class="panel-content">
+                                The most popular state for cal is:
+                                <div id="gauge"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+            </div>
+        </div>
+        <!--/span-->
+
+    </div>
+    <!--/row-->
+
+</div>
+<!--<div class="container-fluid" id="footer">
+
+    &copy; Company 2012
+
+</div>-->
+
+<!--/.fluid-container-->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript">
+    $(document).ready(function() {
+        var plot1 = $.jqplot('holder', [
+            [3,7,9,1,4,6,8,2,5],
+            [2,6,8,0,3,5,7,1,4]
+        ],{
+                series:[{
+                    lineWidth:2,
+                    showMarker:false,
+                    color:'#1e6de3'
+                  },{
+                    lineWidth:2,
+                    showMarker:false,
+                    color:'#ef5ba0'
+                  }],
+                 highlighter: {
+                 show: true,
+                 sizeAdjust: 7.5
+                 }
+         }
+);
+
+
+        $(window).resize(function() {
+            plot1.replot({ resetAxes: true });
+        });
+    });
+</script>
+        
+}

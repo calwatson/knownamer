@@ -1,0 +1,243 @@
+@mainnoheader(title = "Home") {
+<div class="row-fluid" id="search">
+    <div class="span12" >
+        <div id="search-bar">
+            <div class="logo"></div>
+            <div >
+                <form class="form-search" id="search-holder">
+                    <input type="text" class="input-xlarge" placeholder="Search ">
+                    <button type="submit" class="btn"><div class="icon-search" /></button>
+                </form>
+            </div>
+         </div>
+    </div>
+
+</div>
+
+<div class="container-fluid" id="main-content">
+
+
+    <div class="row-fluid" >
+        <div class="span12">
+            <div class="tab-content ">
+                <div class="row-fluid">
+
+                    <!--/span-->
+                    <div class="span4">
+                        <div class="top-left">
+                            <div class="panel-content">
+                                <h4>Did you know?</h4>
+                                <hr>
+                                <table class="table table-bordered">
+                                    <tr><td>Rank</td><td>Beyond 1000th</td></tr>
+                                    <tr><td>Fraction</td><td>1 out of 2000 males</td></tr>
+                                    <tr><td>Number</td><td>< 300 males per year</td></tr>
+                                </table>
+                                
+                                <div id="gauge">
+
+                                </div>
+                                <div style="text-align:center;height:50px">Male vs Female</div>
+
+                                <div class="panel-content">
+                                     <h4>Want to know more?</h4>
+                                    <hr>
+
+                                    <table class="table table-bordered">
+                                        <tr><td>Rank</td><td>Beyond 1000th</td></tr>
+                                          <tr><td>Fraction</td><td>1 out of 2000 males</td></tr>
+                                        <tr><td>Number</td><td>< 300 males per year</td></tr>
+                                    </table>
+                                </div>
+               
+                                <div id="malefemaleratio">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span8">
+                        <div class="top-right ">
+                            <div></div>
+                            <div id="holder" class="panel-content"></div>
+                        </div>
+                        <div class="row-fluid">
+                    <div class="span6">
+                        <div class="bottom-center">
+                            <div class="panel-content">
+                             <h4>Who are they?</h4>
+                                    <hr>
+                                <ul class="unstyled">
+                                    <li>40 year old virgin</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span6">
+                        <div class="bottom-right">
+                            <div class="panel-content">
+                             <h4>Where do the live?</h4>
+                                    <hr>
+                                The most popular state for cal is:
+                                <div id="state"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                    </div>
+                    <!--/span-->
+                </div>
+            </div>
+        </div>
+        <!--/span-->
+
+    </div>
+    <!--/row-->
+
+</div>
+<!--<div class="container-fluid" id="footer">
+
+    &copy; Company 2012
+
+</div>-->
+
+<!--/.fluid-container-->
+
+<!-- Le javascript
+================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script type="text/javascript">
+  $(document).ready(function() {
+
+        var plot1 = $.jqplot('holder', [
+            [3,7,9,1,4,6,8,2,5],
+            [2,6,8,0,3,5,7,1,4]
+        ],{
+                series:[{
+                    lineWidth:2,
+                    showMarker:false,
+                    color:'#1e6de3'
+                  },{
+                    lineWidth:2,
+                    showMarker:false,
+                    color:'#ef5ba0'
+                  }],
+                 highlighter: {
+                 show: true,
+                 sizeAdjust: 7.5
+                 }
+         }
+);
+
+    var drawState = function(){
+          var paper = Raphael('state',200,200);
+         var state =  paper.path("M 759.8167,439.1428 L 762.08236,446.4614 L 765.81206,456.20366 L 771.14685,465.57996 L 774.86504,471.88472 L 779.71486,477.38118 L 783.75637,481.09937 L 785.37297,484.00926 L 784.24135,485.30254 L 783.43305,486.59582 L 786.34293,494.03221 L 789.25282,496.94209 L 791.83939,502.27689 L 795.39592,508.09667 L 799.92241,516.34135 L 801.2157,523.93939 L 801.70068,535.90227 L 802.34732,537.68053 L 802.024,541.0754 L 799.59909,542.36869 L 799.92241,544.30861 L 799.27577,546.24854 L 799.59909,548.67344 L 800.08407,550.61337 L 797.33585,553.84658 L 794.2643,555.30152 L 790.38445,555.46318 L 788.9295,557.07979 L 786.5046,558.04975 L 785.21131,557.56477 L 784.07969,556.59481 L 783.75637,553.68492 L 782.94806,550.29005 L 779.55319,545.11691 L 775.99666,542.85367 L 772.11681,542.53035 L 771.30851,543.82363 L 768.23696,539.4588 L 767.59032,535.90227 L 765.00375,531.86076 L 763.22549,530.72913 L 761.60888,532.83072 L 759.83062,532.5074 L 757.72903,527.49592 L 754.81914,523.61607 L 751.90925,518.28128 L 749.32269,515.20973 L 745.76616,511.49154 L 747.86774,509.06663 L 751.10095,503.57017 L 750.93929,501.95357 L 746.4128,500.98361 L 744.79619,501.63025 L 745.11952,502.27689 L 747.70608,503.24685 L 746.25114,507.77335 L 745.44284,508.25833 L 743.66457,504.21682 L 742.37129,499.367 L 742.04797,496.61877 L 743.50291,491.93062 L 743.50291,482.39265 L 740.43136,478.67446 L 739.13808,475.60291 L 733.96494,474.30963 L 732.02502,473.66299 L 730.40841,471.07642 L 727.01354,469.45981 L 725.88192,466.06494 L 723.13369,465.09498 L 720.70878,461.37679 L 716.50561,459.92185 L 713.59572,458.4669 L 711.00916,458.4669 L 706.96764,459.27521 L 706.80598,461.21513 L 707.61429,462.18509 L 707.1293,463.31672 L 704.05776,463.15506 L 700.33957,466.71159 L 696.78303,468.65151 L 692.90318,468.65151 L 689.66997,469.9448 L 689.34665,467.19657 L 687.73005,465.25664 L 684.82016,464.12502 L 683.20356,462.67007 L 675.12053,458.79022 L 667.52249,457.01196 L 663.15766,457.6586 L 657.17622,458.14358 L 651.19478,460.24517 L 647.71554,460.85813 L 647.47762,452.80838 L 644.89105,450.86846 L 643.11278,449.09019 L 643.4361,446.01863 L 653.62072,444.72535 L 679.16312,441.81546 L 685.95287,441.16882 L 691.38887,441.44909 L 693.97544,445.32895 L 695.43038,446.78389 L 703.52854,447.29911 L 714.34829,446.65247 L 735.86068,445.35918 L 741.3064,444.68481 L 746.41398,444.88932 L 746.84081,447.79921 L 749.07381,448.60751 L 749.30875,443.97751 L 747.78053,439.80456 L 749.08893,438.36473 L 754.64356,438.81948 L 759.8167,439.1428 z M 772.36211,571.54788 L 774.78703,570.90124 L 776.08031,570.65875 L 777.53527,568.31466 L 779.87935,566.69805 L 781.17264,567.18304 L 782.87008,567.50636 L 783.27423,568.55715 L 779.79853,569.76961 L 775.59533,571.22456 L 773.25125,572.43702 L 772.36211,571.54788 z M 785.86081,566.53639 L 787.07327,567.58719 L 789.82151,565.4856 L 795.15632,561.28241 L 798.87452,557.40254 L 801.38027,550.77444 L 802.35024,549.077 L 802.5119,545.68212 L 801.78442,546.1671 L 800.81446,548.99617 L 799.3595,553.6035 L 796.12628,558.8575 L 791.76144,563.06068 L 788.36656,565.00061 L 785.86081,566.53639 z").attr({
+      "fill": "#d3d3d3",
+      "stroke": "#fff",
+      "stroke-opacity": "1",
+      "stroke-linejoin": "round",
+      "stroke-miterlimit": "4",
+      "stroke-width": "0.75",
+             "x":0,
+             "y":0,
+      "stroke-dasharray": "none"
+    });
+
+
+      }
+
+
+    var plotGauge = function(){
+        var rsr = ScaleRaphael('gauge', '300', '150');
+
+        var layer1 = rsr.set();
+        var path3002 = rsr.path("M 51.496655,115.83243 A 125.5,105 0 0 1 299.9488,118.4383 L 175.5,132 z");
+        path3002.attr({id: 'path3002',parent: 'layer1',fill: '#DEFEFE',stroke:'none'});
+        path3002.transform("t0,-752.36218 m1,0,0,1.1095238,-29,748.90504").data('id', 'path3002');
+        var path3004 = rsr.path("m 109.52771,139.76479 a 44.25,34 0 0 1 87.60165,0.8438 L 153.25,145 z");
+        path3004.attr({id: 'path3004',parent: 'layer1',fill: '#ffffff',stroke:'none'});
+        path3004.transform("t0,-752.36218 t-6,752.36218").data('id', 'path3004');
+        layer1.attr({'id': 'layer1','name': 'layer1'});layer1.transform("t0,-752.36218");
+
+        var needle = rsr.path("m 146.74443,870.84631 -2.26177,79.38851 4.38851,0 z");
+        needle.attr({id: 'needle',
+        parent: 'layer1',
+        fill: '#000',
+        stroke:'none'});
+
+        needle.transform("t0,-812.36218").data('id', 'needle');
+
+        // get needle bounding box
+        var needleBox = needle.getBBox();
+
+        // calculate rotation point (bottom middle)
+        var x_rotate_point = needleBox.x + (needleBox.width/2);
+        var y_rotate_point = needleBox.y + needleBox.height ;
+
+        // rotate needle
+        needle.animate({transform: needle.attr("transform") + "R-25,"+x_rotate_point+","+y_rotate_point}, 6000);
+
+        // Creates circle at rotation point
+        var circle = rsr.circle(x_rotate_point , y_rotate_point, 10);
+        circle.attr("fill", "#000");
+        circle.attr("stroke", "none");
+        var rsrGroups = [layer1];
+        rsr.scaleAll(1)
+        return rsr;
+    }
+
+    var plotMaleFemaleRatio = function(males,females,placeholder){
+
+         var x = $("#"+placeholder).offset().left;
+
+         var paper = Raphael(document.getElementById(placeholder), 250, 150);
+
+          var femalepath = {
+             path:"M63.166,97.434l2.76-10.808l9.926,38.151l16.983-0.143l-16.913-66.419l-0.104,0.002"+
+            "c-0.445-7.165-10.167-13.088-23.027-14.526v-3.988c8.125-2.567,14.016-10.161,14.016-19.135C66.806,9.485,57.822,0.5,46.738,0.5" +
+            "c-11.082,0-20.068,8.985-20.068,20.068c0,8.974,5.893,16.567,14.016,19.135v3.989c-12.86,1.438-22.582,7.36-23.027,14.525" +
+            "l-0.103-0.002L0.642,124.635l16.983,0.143l9.896-38.029l2.859,10.686h-0.258l-22.564,67.85h23.666l8.682,60.204H53.57l8.682-60.204" +
+            "h23.668l-22.564-67.85H63.166z"
+          }
+
+          var malepath = {
+            path:"M63.166,354.434l2.76-10.808l9.926,38.151l16.983-0.143l-16.913-66.419l-0.104,0.002"+
+            "    c-0.445-7.165-10.167-13.088-23.027-14.526v-3.988c8.125-2.567,14.016-10.161,14.016-19.135c0-11.083-8.984-20.068-20.068-20.068"+
+            "c-11.082,0-20.068,8.985-20.068,20.068c0,8.974,5.893,16.567,14.016,19.135v3.989c-12.86,1.438-22.582,7.36-23.027,14.525"+
+            "l-0.103-0.002l-16.913,66.419l16.983,0.143l9.896-38.029l2.859,10.686h-0.258l-22.564,127.85h23.155l16.423-87.395l15.837,87.395"+
+            "h22.946l-22.564-127.85H180.166z"
+          }
+
+         for(var i = 0; i< males; i++){
+             var male = paper.path( malepath.path)
+             male.attr("fill", "#1e6de3");
+             male.attr("stroke", "none");
+             male.scale(.20,.20,10,10);
+             male.translate(i * 100,0)
+         }
+         for(var i = 0; i< females; i++){
+             var female = paper.path(femalepath.path)
+             female.attr("fill", "#ef5ba0");
+             female.attr("stroke", "none");
+             female.scale(.20,.20,10,10);
+             female.translate(i*100,0);
+         }
+     }
+
+     var g =  plotGauge();
+     plotMaleFemaleRatio(9,3,'malefemaleratio');
+     drawState();
+
+
+
+
+    $(window).resize(function() {
+           
+          plot1.replot({ resetAxes: true });
+    });
+    });
+</script>
+
+
+
+        }

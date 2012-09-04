@@ -1,0 +1,204 @@
+body{
+    padding-top:160px;
+    font-family: Trebuchet MS, Helvetica, sans-serif;
+}
+/*h4{
+    font-weight: normal;
+}*/
+.blue{
+    background-color:#8191E8;
+}
+.green{
+    background-color:#BAFFDE;
+}
+.yellow{
+    background-color:#EFFF85;
+}
+.pink{
+    background-color:#FF6CCE;
+}
+.gray{
+    background-color:#E6E6E6;
+}
+
+/* male */
+.bottom-left{
+    padding: 19px;
+    margin-bottom: 20px;
+    border: 1px solid #EEE;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+    background-color: white;
+}
+.bottom-center{
+    padding: 19px;
+    margin-bottom: 20px;
+    border: 1px solid #EEE;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background-color: white;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+
+}
+.bottom-right{
+    padding: 19px;
+    margin-bottom: 20px;
+    border: 1px solid #EEE;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background-color: white;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+
+}
+.top-left{
+    min-height:300px;
+    padding: 19px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background-color: white;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+
+}
+
+.top-right{
+    min-height:300px;
+    padding: 19px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+    background-color: white;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    -moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.header{
+    width: 97.2%;
+    padding:4px;
+    border: 1px solid #EEE;
+    border: 1px 1px 1px 1px solid rgba(0, 0, 0, 0.10);
+}
+.header:hover{
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#ffffff), color-stop(25%, #ffffff), to(#e6e6e6));
+    background-image: -webkit-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+    background-image: -moz-linear-gradient(top, #ffffff, #ffffff 25%, #e6e6e6);
+    background-image: -ms-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+    background-image: -o-linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+    background-image: linear-gradient(#ffffff, #ffffff 25%, #e6e6e6);
+    background-repeat: no-repeat
+}
+
+.left-border{
+    border-right: 1px solid rgba(0, 0, 0, 0.05);
+}
+.height-20{
+    height:20px;
+}
+
+#footer {
+    background-image: url('/assets/images/polaroid.png');
+    color:#fff;
+    width: 100%;
+    height:60px;
+    -moz-box-shadow: 0 0 10px 3px #BCCFCD;
+    -webkit-box-shadow: 0 0 10px 3px #BCCFCD;
+    box-shadow: 0 0 10px 3px #BCCFCD;
+}
+
+#main-content{
+    padding-top:24px;
+    padding-bottom: 40px;
+}
+
+#search{
+   width: 100%;
+   height:120px;
+   border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+   background-color:#FFF;
+}
+#search-bar{
+    margin-left: auto;
+    margin-right: auto;
+    width:600px;
+    height: 120px;
+    vertical-align: middle;
+}
+#search-holder{
+    display: table-cell;
+    vertical-align: middle;
+    height: 120px;
+}
+#name{
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 18px;
+}
+#origin{
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#meaning{
+    padding-top:10px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#main-content{
+    background-color: #f5f5f5;
+    width:100%;
+    height:100%;
+}
+.white{
+    color:white;
+}
+.logo{
+    background-image: url('/assets/images/logo.png');
+    background-repeat: no-repeat;
+    background-color: white;
+    height:120px;
+    width:200px;
+    float: left;
+}
+.logo-center{
+    background-image:url('/assets/images/logo-large.png');
+    background-repeat:no-repeat;
+    width:200px;
+    background-color: #FFF;
+    height:122px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.logo-holder{
+    width:400px;
+    background-color: #FFF;
+    height:122px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+.centered{
+    width:400px;
+    background-color: #FFF;
+    display: block;
+    margin-top: 16px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+.panel{
+
+}
